@@ -1,0 +1,29 @@
+version: 0.0.1
+type: plugin
+author: fujita-h
+name: azure_blob_storage
+label:
+    en_US: Azure Blob Storage
+description:
+    en_US: Storing and hosting files.
+    ja_JP: ファイルの保存とホスティング
+icon: 10780-icon-service-Blob-Block.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+    - provider/azure_blob_storage.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2024-12-21T03:52:42.265519861Z
+verified: false

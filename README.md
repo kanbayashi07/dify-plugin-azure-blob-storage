@@ -18,6 +18,6 @@ This tool uploads a file to Azure Blob Storage.
 
 This tool uploads a file to Azure Blob Storage and creates a shared access signature (SAS) URL to share the file.
 
-### Write Log
+#### Write Log
 
 This tool writes a log message to Azure Blob Storage.

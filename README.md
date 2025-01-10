@@ -6,8 +6,6 @@
 ![GitHub Release](https://img.shields.io/github/v/release/fujita-h/dify-plugin-azure-blob-storage)
 ![GitHub License](https://img.shields.io/github/license/fujita-h/dify-plugin-azure-blob-storage)
 
-### Description
-
 This plugin provides tools for uploading and sharing files to Azure Blob Storage.
 
 > [!IMPORTANT]  

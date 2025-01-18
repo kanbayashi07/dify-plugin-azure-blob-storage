@@ -16,12 +16,12 @@ class WriteLogTool(Tool):
             raise Exception("Tool runtime or credentials are missing")
 
         # Get account name
-        account_name = self.runtime.credentials.get("azure_blob_storage_account_name")
+        account_name = self.runtime.credentials.get("account_name")
         if not account_name:
             raise ValueError("Azure Blob Storage connection string is required")
 
         # Get API key
-        api_key = self.runtime.credentials.get("azure_blob_storage_api_key")
+        api_key = self.runtime.credentials.get("api_key")
         if not api_key:
             raise ValueError("Azure Blob Storage API Key is required")
 
@@ -45,9 +45,7 @@ class WriteLogTool(Tool):
         # get current time
         current_time = datetime.now(UTC)
         blob = (
-            f"{resource_name}/"
-            f"{current_time.strftime('%Y/%m/%d/%H-%M-%S.%f')}-{uuid.uuid4().hex}"
-            f"{file_suffix_str}.log"
+            f"{resource_name}/{current_time.strftime('%Y/%m/%d/%H-%M-%S.%f')}-{uuid.uuid4().hex}{file_suffix_str}.log"
         )
 
         # create a blob client using the connection string

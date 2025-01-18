@@ -32,7 +32,7 @@ parameters:
       ja_JP: プレフィックスはアップロード時にBlobファイル名の先頭に追加される文字列です。これにより、Blobのファイル名や仮想フォルダ構造を動的に制御できます。例えば、prefix="folder1/" と指定すると、Blobは folder1/filename の形式で保存されます。これにより、ファイル名の重複を回避し、ファイルを仮想フォルダに整理できます。
     llm_description: The prefix is a string added to the beginning of the Blob file name during upload. It allows dynamic control of the Blob's file name and virtual folder structure. For example, if prefix="folder1/", the Blob will be saved as folder1/filename. This helps avoid file name conflicts and organizes files into virtual directories.
     form: llm
-  - name: file
+  - name: input_file
     type: file
     required: true
     label:

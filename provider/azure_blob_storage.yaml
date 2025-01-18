@@ -10,7 +10,7 @@ identity:
   tags:
     - utilities
 credentials_for_provider:
-  azure_blob_storage_account_name:
+  account_name:
     type: text-input
     required: true
     label:
@@ -20,7 +20,7 @@ credentials_for_provider:
       en_US: Enter Storage Account Name
       ja_JP: ストレージアカウント名を入力
     url: https://portal.azure.com
-  azure_blob_storage_api_key:
+  api_key:
     type: secret-input
     required: true
     label:

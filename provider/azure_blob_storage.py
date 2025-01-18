@@ -8,8 +8,8 @@ from dify_plugin.errors.tool import ToolProviderCredentialValidationError
 class AzureBlobStorageProvider(ToolProvider):
     def _validate_credentials(self, credentials: dict[str, Any]) -> None:
         try:
-            account_name = credentials.get("azure_blob_storage_account_name")
-            api_key = credentials.get("azure_blob_storage_api_key")
+            account_name = credentials.get("account_name")
+            api_key = credentials.get("api_key")
 
             # ensure account name and api key are provided
             if not account_name:

@@ -17,12 +17,12 @@ class ShareFileTool(Tool):
             raise Exception("Tool runtime or credentials are missing")
 
         # Get account name
-        account_name = self.runtime.credentials.get("azure_blob_storage_account_name")
+        account_name = self.runtime.credentials.get("account_name")
         if not account_name:
             raise ValueError("Azure Blob Storage connection string is required")
 
         # Get API key
-        api_key = self.runtime.credentials.get("azure_blob_storage_api_key")
+        api_key = self.runtime.credentials.get("api_key")
         if not api_key:
             raise ValueError("Azure Blob Storage API Key is required")
 
@@ -50,7 +50,7 @@ class ShareFileTool(Tool):
             raise Exception("Failed to create container") from e
 
         # Get file
-        file = tool_parameters.get("file")
+        file = tool_parameters.get("input_file")
         if not file:
             raise ValueError("File is required")
 

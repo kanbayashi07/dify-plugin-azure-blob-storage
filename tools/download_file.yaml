@@ -1,0 +1,48 @@
+identity:
+  name: download_file
+  author: fujita-h
+  label:
+    en_US: Download File
+    ja_JP: ファイルのダウンロード
+description:
+  human:
+    en_US: Download file from Azure Blob Storage
+    ja_JP: Azure Blob Storageからファイルをダウンロード
+  llm: This tool downloads file from Azure Blob Storage
+parameters:
+  - name: container_name
+    type: string
+    required: true
+    label:
+      en_US: Container name
+      ja_JP: コンテナ名
+    human_description:
+      en_US: Name of the container to download from
+      ja_JP: ダウンロード元のコンテナの名称
+    llm_description: Name of the container to download from
+    form: llm
+  - name: blob_name
+    type: string
+    required: true
+    label:
+      en_US: Blob name
+      ja_JP: Blob名
+    human_description:
+      en_US: Name of the blob (file) to download from Azure Blob Storage
+      ja_JP: Azure Blob Storageからダウンロードするblob（ファイル）の名前
+    llm_description: Name of the blob (file) to download from Azure Blob Storage
+    form: llm
+  - name: local_file_path
+    type: string
+    required: false
+    label:
+      en_US: Local file path
+      ja_JP: ローカルファイルパス
+    human_description:
+      en_US: Optional local file path to save the downloaded file. If not provided, the file content will be returned as binary data.
+      ja_JP: ダウンロードしたファイルを保存するローカルファイルパス（オプション）。指定しない場合、ファイル内容はバイナリデータとして返されます。
+    llm_description: Optional local file path to save the downloaded file. If not provided, the file content will be returned as binary data.
+    form: llm
+extra:
+  python:
+    source: tools/download_file.py

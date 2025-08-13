@@ -31,7 +31,7 @@ credentials_for_provider:
       ja_JP: APIキーを入力
     url: https://portal.azure.com
 tools:
-  - tools/upload_file.yaml
+  - tools/download_file.yaml
   - tools/share_file.yaml
   - tools/write_log.yaml
 extra:
